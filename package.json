@@ -1,0 +1,21 @@
+{
+  "name": "ilhabela-itinerario",
+  "version": "1.0.0",
+  "description": "Itinerario de viaje a Ilhabela, Brasil",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "ilhabela",
+    "brasil",
+    "viaje",
+    "itinerario"
+  ],
+  "author": "Julián e Iara",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+} 

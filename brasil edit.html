@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerario Brasil - Julián</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0 auto; /* Centrado horizontal */
+        padding: 20px;
+        max-width: 800px; /* Ancho máximo para el contenido */
+        min-height: 100vh; /* Altura mínima */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrado horizontal del contenido */
+    }
+
+    header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box; /* Para incluir padding en el width */
+    }
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+            color: #1a73e8;
+        }
+        .card p {
+            margin: 5px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .tips ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .map-button {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+        }
+        
+        .blue-button {
+            background-color: #1a73e8;
+        }
+        
+        .blue-button:hover {
+            background-color: #1557b0;
+        }
+        
+        .green-button {
+            background-color: #34a853;
+        }
+        
+        .green-button:hover {
+            background-color: #2d8a46;
+        }
+        img {
+        max-width: 100%;
+        height: auto;
+    }
+    .route-table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+    .route-table th, .route-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+        
+    h1 {
+        text-align: center;
+        color: #1a73e8;
+    }
+    /* Ajuste para dispositivos móviles */
+    @media (max-width: 600px) {
+        body {
+            padding: 10px;
+        }
+
+        .section {
+            padding: 15px;
+        }
+    }
+</style>
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>ITINERARIO ILHABELA BRASIL - IARA Y JULIÁN</h1>
+        <p>Destino: São Paulo (GRU) → Ilhabela | Días: Sábado a Viernes (7 días)</p>
+    </header>
+
+
+
+    <div class="section">
+        <h2>🛍️ SHOPPINGS CERCA DEL AEROPUERTO (GRU)</h2>
+        <div class="card">
+            <h3>Shopping Internacional Guarulhos</h3>
+            <p><strong>Horario:</strong> 10:00 - 22:00</p>
+            <p><strong>Recomendación:</strong> Ideal para compras rápidas (electrónica y souvenirs)</p>
+            <div class="button-container">
+                <a href="https://maps.app.goo.gl/5kE8SxfHS4biDzhM8" 
+                   target="_blank" 
+                   class="map-button blue-button">
+                    DIRECCIÓN
+                </a>
+                <a href="https://maps.app.goo.gl/n4UNzkYsANnbiDad6" 
+                   target="_blank" 
+                   class="map-button green-button">
+                    ✈️🏝️
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Shopping Metrô Itaquera</h3>
+            <p><strong>Horario:</strong> 10:00 - 22:00</p>
+            <p><strong>Recomendación:</strong> Marcas internacionales y zona de comida</p>
+            <div class="button-container">
+                <a href="https://maps.app.goo.gl/qgtX6ri8fMGgKpsL8" 
+                   target="_blank" 
+                   class="map-button blue-button">
+                    DIRECCIÓN
+                </a>
+                <a href="https://maps.app.goo.gl/65TP7KABjEP6iKXw8" 
+                   target="_blank" 
+                   class="map-button green-button">
+                   ✈️🏝️
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Shopping Center Norte</h3>
+            <p><strong>Horario:</strong> 10:00 - 22:00</p>
+            <p><strong>Recomendación:</strong> Productos locales y calzados brasileños</p>
+            <div class="button-container">
+                <a href="https://maps.app.goo.gl/9ixM5QMA5XYeSAEF6" 
+                   target="_blank" 
+                   class="map-button blue-button">
+                    DIRECCIÓN
+                </a>
+                <a href="https://maps.app.goo.gl/65TP7KABjEP6iKXw8" 
+                   target="_blank" 
+                   class="map-button green-button">
+                    ✈️🏝️
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Ruta -->
+
+    <div class="section">
+        <h2>🚗 RUTA AEROPUERTO GRU → ILHABELA</h2>
+        <style>
+            .route-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                background-color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .route-table th, .route-table td {
+                padding: 12px;
+                text-align: left;
+                border-bottom: 1px solid #eee;
+            }
+            .route-table th {
+                background-color: #1a73e8;
+                color: white;
+            }
+            .route-table tr:hover {
+                background-color: #f8f9fa;
+            }
+            .route-table tr:last-child td {
+                border-bottom: none;
+            }
+        </style>
+        <table class="route-table">
+            <thead>
+                <tr>
+                    <th>Opción</th>
+                    <th>Detalles</th>
+                    <th>Duración</th>
+                    <th>Precios</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>🚌 Bus Litoraneo y Passaro Marron</strong><br>(GRU → São Sebastião)</td>
+                    <td>
+                        • Salida: 14:15<br>
+                        • Llegada: 18:10<br>
+                        • Compañía: Litoraneo<br>
+                        • ¡Ruta más rápida!
+                    </td>
+                    <td>3h 55m</td>
+                    <td id="busPriceRow">R$173,90 (USD 30)</td>
+                </tr>
+                <tr>
+                    <td><strong>🚗 Taxi</strong><br>(GRU → São Sebastião)</td>
+                    <td>
+                        • Servicio puerta a puerta<br>
+                        • Más flexibilidad de horario<br>
+                        • Recomendado para grupos
+                    </td>
+                    <td>3h 00m</td>
+                    <td id="taxiPriceRow">R$200-300 (USD 34-52)</td>
+                </tr>
+                <tr>
+                    <td><strong>⛴️ Ferry</strong><br>(São Sebastião → Ilhabela)</td>
+                    <td>
+                        • Opera: 6:00 - 23:00<br>
+                        • Frecuencia: cada 30 min<br>
+                        • Obligatorio para todos
+                    </td>
+                    <td>20m</td>
+                    <td>Gratis<br>(peatones)</td>
+                </tr>
+                <tr>
+                    <td><strong>🚕 Taxi</strong><br>(Puerto → Hotel)</td>
+                    <td>
+                        • Disponible en el puerto<br>
+                        • Servicio 24/7<br>
+                        • Trayecto corto
+                    </td>
+                    <td>15m</td>
+                    <td id="localTaxiPriceRow">R$30-50 (USD 5-9)</td>
+                </tr>
+            </tbody>
+        </table>
+        <style>
+            .exchange-rate-input {
+                padding: 8px;
+                border: 1px solid #1a73e8;
+                border-radius: 4px;
+                width: 100px;
+                margin-right: 10px;
+            }
+            .exchange-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+        </style>
+
+        <div class="exchange-container">
+            <input type="number" 
+                   id="exchangeRate" 
+                   class="exchange-rate-input" 
+                   value="5.8" 
+                   step="0.1" 
+                   min="0">
+            <span>Tipo de cambio (1 USD = R$)</span>
+        </div>
+
+        <button onclick="toggleConversion()" class="toggle-button">
+            💱 Mostrar tabla de conversión
+        </button>
+        <div id="conversionTable" class="card hidden">
+            <h3>💱 Conversión</h3>
+            <table style="width: 100%; margin-top: 10px;">
+                <tr>
+                    <td><strong>🚌 GRU → São Sebastião:</strong></td>
+                    <td id="busCost">R$ 173,90 (USD 30)</td>
+                </tr>
+                <tr>
+                    <td><strong>🚗 GRU → São Sebastião:</strong></td>
+                    <td id="taxiCost">R$ 200-300 (USD 34-52)</td>
+                </tr>
+                <tr>
+                    <td><strong>⛴️ São Sebastião → Ilhabela:</strong></td>
+                    <td>Gratis✨</td>
+                </tr>
+                <tr>
+                    <td><strong>🚕 Puerto → Hotel:</strong></td>
+                    <td id="localTaxiCost">R$ 30-50 (USD 5-9)</td>  
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            const prices = {
+                bus: 173.90,
+                taxi: { min: 200, max: 300 },
+                localTaxi: { min: 30, max: 50 }
+            };
+        
+            function updatePrices() {
+                const rate = parseFloat(document.getElementById('exchangeRate').value);
+                
+                // Actualizar bus
+                const busUSD = (prices.bus / rate).toFixed(2);
+                document.getElementById('busPriceRow').textContent = 
+                    `R$ ${prices.bus} (USD ${busUSD})`;
+                document.getElementById('busCost').textContent = 
+                    `R$ ${prices.bus} (USD ${busUSD})`;
+                
+                // Actualizar taxi
+                const taxiMinUSD = (prices.taxi.min / rate).toFixed(2);
+                const taxiMaxUSD = (prices.taxi.max / rate).toFixed(2);
+                document.getElementById('taxiPriceRow').textContent = 
+                    `R$ ${prices.taxi.min}-${prices.taxi.max} (USD ${taxiMinUSD}-${taxiMaxUSD})`;
+                document.getElementById('taxiCost').textContent = 
+                    `R$ ${prices.taxi.min}-${prices.taxi.max} (USD ${taxiMinUSD}-${taxiMaxUSD})`;
+                
+                // Actualizar taxi local
+                const localTaxiMinUSD = (prices.localTaxi.min / rate).toFixed(2);
+                const localTaxiMaxUSD = (prices.localTaxi.max / rate).toFixed(2);
+                document.getElementById('localTaxiPriceRow').textContent = 
+                    `R$ ${prices.localTaxi.min}-${prices.localTaxi.max} (USD ${localTaxiMinUSD}-${localTaxiMaxUSD})`;
+                document.getElementById('localTaxiCost').textContent = 
+                    `R$ ${prices.localTaxi.min}-${prices.localTaxi.max} (USD ${localTaxiMinUSD}-${localTaxiMaxUSD})`;
+            }
+
+            document.getElementById('exchangeRate').addEventListener('input', updatePrices);
+
+            function toggleConversion() {
+                const table = document.getElementById('conversionTable');
+                const button = document.querySelector('.toggle-button');
+                if (table.classList.contains('hidden')) {
+                    table.classList.remove('hidden');
+                    button.textContent = '💱 Ocultar tabla de conversión';
+                } else {
+                    table.classList.add('hidden');
+                    button.textContent = '💱 Mostrar tabla de conversión';
+                }
+            }
+        </script>
+        <button onclick="abrirComparacion()" class="toggle-button">🔄 Comparar precios</button>
+
+        <script>
+            function abrirComparacion() {
+                // Abre la página en una nueva ventana/pestaña
+                window.open('https://comparapix.ar/', '_blank');
+            }
+        </script>
+
+
+    <!-- Sección de Plan Diario -->
+    <div class="section">
+        <h2>📅 PLAN DIARIO EN ILHABELA</h2>
+        <div class="card">
+            <h3>DÍA 1 (SÁBADO)</h3>
+            <p><strong>Actividad:</strong> Check-in + centro histórico</p>
+            <ul>
+                <li>Lugares: Vila Ilhabela, Iglesia Matriz N.S. D'Ajuda</li>
+                <li>Recomendación: Cena en Restaurante Casarão (moqueca de peixe)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 2 (DOMINGO)</h3>
+            <p><strong>Actividad:</strong> Praia do Curral + Cachoeira do Gato</p>
+            <ul>
+                <li>Horario: 9:00 - 16:00</li>
+                <li>Tips: Llevar repelente y zapatos para trekking</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 3 (LUNES)</h3>
+            <p><strong>Actividad:</strong> Excursión a Praia do Castelhanos</p>
+            <ul>
+                <li>Transporte: Barco o 4x4 con guía local</li>
+                <li>Horario: 8:00 - 17:00</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 4 (MARTES)</h3>
+            <p><strong>Actividad:</strong> Trekking + Praia da Feiticeira</p>
+            <ul>
+                <li>Ruta: Trilha da Água Branca (2 horas de caminata)</li>
+                <li>Tips: Agua y snacks</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 5 (MIÉRCOLES)</h3>
+            <p><strong>Actividad:</strong> Día de relax</p>
+            <ul>
+                <li>Actividades: Spa en hotel + bicicleta por la costa norte</li>
+                <li>Alquiler bici: ~R$40/día</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 6 (JUEVES)</h3>
+            <p><strong>Actividad:</strong> Tour cultural</p>
+            <ul>
+                <li>Lugares: Museu Náutico, Mirante do Baepi</li>
+                <li>Cena: Restaurante Costazul (reserva recomendada)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>DÍA 7 (VIERNES)</h3>
+            <p><strong>Actividad:</strong> Compras + regreso</p>
+            <ul>
+                <li>Souvenirs: Feirinha de Artesanatos (cachaça artesanal)</li>
+                <li>Salida: Ferry a las 12:00 → GRU</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Sección de Galería -->
+    <div class="section">
+        <h2>📸 GALERÍA</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200" alt="Praia do Curral">
+            <img src="https://via.placeholder.com/300x200" alt="Cachoeira do Gato">
+            <img src="https://via.placeholder.com/300x200" alt="Centro Histórico">
+            <img src="https://via.placeholder.com/300x200" alt="Ferry Ilhabela">
+        </div>
+    </div>
+
+    <!-- Sección de Tips Extra -->
+    <div class="section tips">
+        <h2>✨ TIPS EXTRA</h2>
+        <ul>
+            <li>Comida imperdible: Pastel de camarão, caipirinha de maracuyá</li>
+            <li>Fotos épicas: Amanecer en Praia do Castelhanos</li>
+            <li>Transporte: Alquila una moto para moverte fácilmente</li>
+            <li>Salud: Lleva repelente y bloqueador solar</li>
+        </ul>
+    </div>
+
+</body>
+</html>
