@@ -12,7 +12,7 @@ Página web con el itinerario detallado para un viaje de 7 días a Ilhabela, Bra
 
 ## Cómo usar
 
-1. Visita la página en: https://tuusername.github.io
+1. Visita la página en: https://Shulian4K.github.io
 2. Usa el convertidor de moneda para calcular precios actualizados
 3. Sigue los enlaces de mapas para ubicaciones exactas
 
